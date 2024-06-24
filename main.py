@@ -48,5 +48,5 @@ async def accept_order(request: Request, body: dict):
 
 if __name__ == "__main__":
     import uvicorn
-    uvicorn.run('main:app', host="0.0.0.0", port=42069, reload=True)
+    uvicorn.run('main:app', host="0.0.0.0", port=443, reload=True)
 
