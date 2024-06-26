@@ -1,2 +1,7 @@
 .env
 venv/
+
+*.pyc
+*.pyo
+*.egg-info
+*.egg
