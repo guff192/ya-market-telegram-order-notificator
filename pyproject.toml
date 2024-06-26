@@ -1,0 +1,25 @@
+[tool.poetry]
+name = "yandex-market-notificator"
+version = "0.1.0"
+description = "A simple web app to receive orders from Ya.Market and notify about them in telegram forum topic"
+authors = ["guff192 <kochkons1@ya.ru>"]
+readme = "README.md"
+packages = [{include = "yandex_market_notificator"}]
+
+[tool.poetry.dependencies]
+python = "^3.10"
+fastapi = "^0.111.0"
+requests = "^2.32.3"
+pydantic = "^2.7.4"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.autopep8]
+max_line_length = 120
+ignore = "E501,W6"  # or ["E501", "W6"]
+in-place = true
+recursive = true
+aggressive = 3
