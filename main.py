@@ -28,12 +28,14 @@ async def accept_order(request: Request, body: dict):
 
     items: list[OrderItem] = []
     for item in items_data:
-        items.append(OrderItem(
-            sku=item.get("shopSku", ""),
-            name=item.get("offerName", ""),
-            count=item.get("count", 0),
-            price=item.get("buyerPrice", 0),
-        ))
+        items.append(
+            OrderItem(
+                sku=item.get("shopSku", ""),
+                name=item.get("offerName", ""),
+                count=item.get("count", 0),
+                price=item.get("buyerPrice", 0),
+            )
+        )
 
     order_info = OrderInfo(
         order_id=order_id,
@@ -48,5 +50,5 @@ async def accept_order(request: Request, body: dict):
 
 if __name__ == "__main__":
     import uvicorn
-    uvicorn.run('main:app', host="0.0.0.0", port=443, reload=True)
 
+    uvicorn.run("main:app", host="0.0.0.0", port=443, reload=True)
